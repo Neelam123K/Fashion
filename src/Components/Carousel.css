@@ -1,0 +1,52 @@
+/* Remove default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: #f8f8f8; /* light background for contrast */
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.carousel-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.carousel-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;   /* image fit properly */
+  border-radius: 12px;
+  margin-right: 15px;  /* spacing between images */
+  flex-shrink: 0;
+}
+
+/* Infinite scroll effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
